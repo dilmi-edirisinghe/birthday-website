@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To the Lovely Person I have ever met❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+<div class="hearts"></div>
+
+<audio id="music" loop>
+    <source src="assets/song.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <section class="screen active" id="intro">
+        <h1>To the Lovely Person I have ever met❤️</h1>
+        <h2>This is for you My Love, My Soulmate 🌹🩷🫂</h2>
+        <h3>2026.07.09<h3>
+        <p>From,Sudu Nona💖</p>
+        <button onclick="playMusic()">🎵 Play the Music First</button>
+        <button onclick="startJourney()">Then Open My Heart❤️</button>
+    </section>
+
+    <!-- LETTER -->
+    <section class="screen" id="letter">
+        <h1>💌 My Heart For You</h1>
+        <div class="letter-box">
+            <p id="typeText"></p>
+        </div>
+        <button onclick="showGallery()">Touch Me ➜</button>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="screen" id="gallery">
+        <h1>📸 Our Memories</h1>
+        <div class="gallery">
+            <img src="assets/img(1).jpg" onclick="openImg(this)">
+            <img src="assets/img(2).jpg" onclick="openImg(this)">
+            <img src="assets/img(3).jpg" onclick="openImg(this)">
+            <img src="assets/img(4).jpg" onclick="openImg(this)">
+        </div>
+        <button onclick="showCake()">Next Surprise 🎂</button>
+    </section>
+
+    <!-- CAKE -->
+    <section class="screen" id="cake">
+        <h1>🎂 Make a Wish</h1>
+        <div class="cake" onclick="blowCandles()">🎂</div>
+        <p>Click the cake ❤️</p>
+    </section>
+
+    <!-- FINAL -->
+    <section class="screen" id="final">
+        <h1>🎉 Happy Birthday Mage Manike ❤️</h1>
+        <p class="final-text">
+            Distance means nothing when someone means everything ❤️<br>
+ Waiting for Hug You, Kiss You My Love ❤️❤️❤️ <br><br>
+            21 December 2019 — Our Beginning<br>
+            09 July — Your Special Day<br><br><br>
+සුබම සුබ උපන්දිනයක් ඔයාට මගේ පන ❤️🌹<br><br><br>
+            Forever Yours,<br>
+            <b>Dilmi 💖</b>
+        </p>
+    </section>
+
+</div>
+
+<!-- IMAGE POPUP -->
+<div id="popup" onclick="closeImg()">
+    <img id="popupImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

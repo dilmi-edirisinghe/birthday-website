@@ -1,0 +1,153 @@
+ body {
+    background-image: url("assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff; /* 👈 BODY TEXT COLOR */
+    font-family: Arial, sans-serif;
+}
+
+/* stars */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("assets/bg.jpg");
+    opacity: 0.3;
+    z-index: -2;
+}
+
+/* hearts animation */
+.hearts::before {
+    content: "❤️ 💖 💕 💗 💞";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation: floatHearts 10s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+/* screens */
+.screen {
+    display: none;
+    animation: fade 1s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* heading */
+h1 {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* buttons */
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    background: gold;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+/* letter */
+.letter-box {
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* cake */
+.cake {
+    font-size: 90px;
+    cursor: pointer;
+}
+
+/* popup */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#popup img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+#typeText {
+    white-space: pre-line;
+    line-height: 1.8;
+}
+
+/* fade animation */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* confetti */
+.confetti {
+    position: fixed;
+    top: -10px;
+    font-size: 24px;
+    pointer-events: none;
+    animation: confettiFall linear forwards;
+    z-index: 999;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
